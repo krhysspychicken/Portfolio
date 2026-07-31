@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY WORKS | PORTFOLIO by kring!</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Miss+Fajardose&family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="works.html">Works</a>
+    <a href="contacts.html">Contacts</a>
+    <a href="about.html">About</a>
+    <a href="certificate.html">Certifications</a>
+  </nav>
+
+  <section class="portfolio-section works-page">
+    <h1 class="section-title">EXPLORE MY WORKS!</h1>
+
+    <div class="works-list">
+      <article class="works-card">
+        <img src="posters/2.jpg" alt="Poster design 2">
+      </article>
+      <article class="works-card">
+        <img src="posters/3.jpg" alt="Poster design 3">
+      </article>
+      <article class="works-card">
+        <img src="posters/4.jpg" alt="Poster design 4">
+      </article>
+      <article class="works-card">
+        <img src="posters/5.jpg" alt="Poster design 5">
+      </article>
+      <article class="works-card">
+        <img src="posters/6.jpg" alt="Poster design 6">
+      </article>
+      <article class="works-card">
+        <img src="posters/8.jpg" alt="Poster design 8">
+      </article>
+      <article class="works-card">
+        <img src="posters/9.jpg" alt="Poster design 9">
+      </article>
+      <article class="works-card">
+        <img src="posters/10.jpg" alt="Poster design 10">
+      </article>
+      <article class="works-card">
+        <img src="posters/11.jpg" alt="Poster design 11">
+      </article>
+      <article class="works-card">
+        <img src="posters/12.jpg" alt="Poster design 12">
+      </article>
+      <article class="works-card">
+        <img src="posters/13.jpg" alt="Poster design 13">
+      </article>
+      <article class="works-card">
+        <img src="posters/14.jpg" alt="Poster design 14">
+      </article>
+      <article class="works-card">
+        <img src="posters/a.jpg" alt="Poster design a">
+      </article>
+      <article class="works-card">
+        <img src="posters/d.png" alt="Poster design d">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/cc1.jpg" alt="Pubmat cc1">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/cc2.jpg" alt="Pubmat cc2">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/cc3.jpg" alt="Pubmat cc3">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/cc4.jpg" alt="Pubmat cc4">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/Ros1.jpg" alt="Pubmat Ros1">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/Ros2.jpg" alt="Pubmat Ros2">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/Ros3.jpg" alt="Pubmat Ros3">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/Ros4.jpg" alt="Pubmat Ros4">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/Ros5.jpg" alt="Pubmat Ros5">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/sm1.jpg" alt="Pubmat sm1">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/sm3.jpg" alt="Pubmat sm3">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/sm4.jpg" alt="Pubmat sm4">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/t1.jpg" alt="Pubmat t1">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/t2.jpg" alt="Pubmat t2">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/t3.jpg" alt="Pubmat t3">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/t4.jpg" alt="Pubmat t4">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/Wom 1.png" alt="Pubmat Wom 1">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/Wom 2.png" alt="Pubmat Wom 2">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/Wom 3.png" alt="Pubmat Wom 3">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/Wom 4.png" alt="Pubmat Wom 4">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/Frame 39.png" alt="Pubmat Frame 39">
+      </article>
+      <article class="works-card">
+        <img src="pubmat/Frame 40.png" alt="Pubmat Frame 40">
+      </article>
+    </div>
+  </section>
+  <script>
+    // Highlight active navbar link based on current filename
+    (function setActiveNav(){
+      const links = document.querySelectorAll('.navbar a');
+      const current = location.pathname.split('/').pop() || 'index.html';
+      links.forEach(a => {
+        if (a.getAttribute('href') === current) {
+          a.classList.add('active');
+          a.setAttribute('aria-current', 'page');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

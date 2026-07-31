@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | PORTFOLIO by kring!</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Miss+Fajardose&family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="works.html">Works</a>
+    <a href="contacts.html">Contacts</a>
+    <a href="about.html">About</a>
+    <a href="certificate.html">Certifications</a>
+  </nav>
+
+  <!-- About Section (copied from index.html) -->
+  <section class="about-section">
+    <div class="about-top">
+      <h2 class="about-title">get to know me &lt;3</h2>
+      
+      <div class="tools-container">
+        <p class="tools-label">Tools</p>
+        <div class="tools-icons">
+          <!-- Palitan ang src ng tunay mong tool icon paths -->
+          <img src="./pictures/capcut.png" alt="CapCut">
+          <img src="./pictures/ibis.png" alt="ibisPaint">
+          <img src="./pictures/figma.png" alt="Figma">
+          <img src="./pictures/canva.png" alt="Canva">
+          <img src="./pictures/ps.png" alt="Photoshop">
+        </div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div class="about-column">
+        <h3>Brief Description ★</h3>
+        <p>A senior Information Technology student specializing in multimedia section connecting technology to the realm of codes and programming.</p>
+      </div>
+
+      <div class="about-column">
+        <h3>Experiences ★</h3>
+        <ul>
+          <li>Senior Graphics/Layout Artist at <em>The QCU Times Publication</em></li>
+          <li>Creative Committee at <em>AWS User Group e:Novators</em></li>
+          <li>Creative Committee at <em>WorkFlow PH</em></li>
+          <li>Creative Volunteer at <em>Huawei Cloud Developer Group</em></li>
+        </ul>
+      </div>
+
+      <div class="profile-column">
+        <div class="profile-frame">
+          <img src="./pictures/kring.svg" alt="Krhyss Kringle Tuba-on">
+        </div>
+        <p class="profile-name">Krhyss Kringle Tuba-on (kring)</p>
+        <p class="profile-sub">Information Technology at Quezon City University</p>
+      </div>
+    </div>
+  </section>
+  <script>
+    // Highlight active navbar link based on current filename
+    (function setActiveNav(){
+      const links = document.querySelectorAll('.navbar a');
+      const current = location.pathname.split('/').pop() || 'index.html';
+      if (current === 'index.html') return;
+      links.forEach(a => {
+        if (a.getAttribute('href') === current) {
+          a.classList.add('active');
+          a.setAttribute('aria-current', 'page');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
