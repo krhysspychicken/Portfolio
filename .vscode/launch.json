@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\christian dave\\OneDrive\\Downloads\\Portfolio\\index.html"
+            "file": "C:\\Users\\QCU\\Desktop\\Portfolio\\index.html"
         }
     ]
 }
