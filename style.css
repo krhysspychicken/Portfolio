@@ -18,19 +18,24 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
   min-height: 100vh;
+  min-height: 100dvh; /* dynamic viewport height — handles mobile browser chrome */
+  display: flex;
+  flex-direction: column;
 }
 
 .site-footer {
   width: 100vw;
-  margin: clamp(80px, 15.625vw, 250px) 0 0 0;
+  margin-top: auto;   /* push footer to the bottom of the viewport */
+  margin-bottom: 0;
+  margin-left: -50vw;
+  margin-right: -50vw;
   padding: clamp(24px, 4.375vw, 70px) clamp(12px, 2.1875vw, 35px);
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   background: #000;
   position: relative;
   left: 50%;
   right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  order: 9999;        /* ensure it is always rendered below any dynamically loaded scripts/elements */
 }
 
 .site-footer__inner {
@@ -566,7 +571,7 @@ body {
 /* --- CONTACT SECTION --- */
 .contact-section {
   max-width: 1000px;
-  margin: 0 auto clamp(24px, 5vw, 80px) auto;
+  margin: 0 auto clamp(60px, 10vw, 150px) auto;
 }
 
 .contacts-container {
@@ -932,29 +937,30 @@ body {
 .about-page-title {
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
-  font-size: clamp(1.1rem, 2.6vw, 2.6rem);
+  font-size: clamp(1.2rem, 3.5vw, 3.5rem);
+  line-height: 1.1;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.05em;
-  margin-bottom: clamp(16px, 3vw, 48px);
-  color: #000;
+  max-width: 1200px;
+  margin: 0 auto clamp(16px, 3.125vw, 50px) auto;
 }
 
 .tools-title {
   margin-bottom: clamp(12px, 2.25vw, 36px);
 }
 
-.about-page-content {
+/* ---- ABOUT TOP ROW: photo + info side by side ---- */
+.about-top-row {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  gap: 1.5rem;
+  align-items: center;
+  gap: clamp(55px, 6.5vw, 85px);
+  margin-bottom: clamp(28px, 4vw, 56px);
 }
 
 .about-photo-wrap {
-  flex: 0 0 35%;
-  max-width: 250px;
-  width: 100%;
+  flex: 0 0 auto;
+  width: clamp(140px, 35vw, 260px);
   aspect-ratio: 1 / 1;
 }
 
@@ -975,10 +981,8 @@ body {
 
 .about-info-label {
   font-weight: 700;
-  font-size: clamp(0.88rem, 1.1vw, 1.05rem);
-  margin-bottom: clamp(4px, 0.6vw, 8px);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  margin-bottom: clamp(4px, 0.5vw, 7px);
 }
 
 .about-info-desc {
@@ -989,7 +993,7 @@ body {
 }
 
 .about-details {
-  margin-bottom: clamp(14px, 1.8vw, 22px);
+  margin-bottom: 0;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -1000,13 +1004,25 @@ body {
   font-size: clamp(0.82rem, 1vw, 0.92rem);
 }
 
+/* ---- EXPERIENCES: full width below the photo+info row ---- */
+.about-experiences-wrap {
+  width: 100%;
+  font-family: 'Fira Code', monospace;
+  font-size: clamp(0.82rem, 1vw, 0.95rem);
+  color: #111;
+}
+
+.about-experiences-wrap .about-info-label {
+  margin-bottom: clamp(6px, 0.8vw, 10px);
+}
+
 .about-exp-list {
   list-style: none;
   padding: 0;
-  margin: clamp(6px, 0.8vw, 10px) 0 0 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
 
 .about-exp-list li {
@@ -1015,6 +1031,10 @@ body {
   font-size: clamp(0.8rem, 0.95vw, 0.9rem);
   color: #222;
   line-height: 1.5;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
 }
 
 .about-exp-list li::before {
@@ -1022,12 +1042,27 @@ body {
   position: absolute;
   left: 0;
   color: #555;
+  flex-shrink: 0;
 }
 
 .about-exp-list em {
   font-style: italic;
   color: #000;
 }
+
+.exp-text {
+  flex: 1;
+}
+
+.exp-date {
+  white-space: nowrap;
+  text-align: right;
+  color: #555;
+  font-size: clamp(0.75rem, 0.9vw, 0.85rem);
+  flex-shrink: 0;
+}
+
+
 
 /* ---- TOOLS SECTION ---- */
 .tools-page-section {
@@ -1109,7 +1144,7 @@ body {
 /* ---- CONTACT PAGE SECTION ---- */
 .contact-page-section {
   max-width: 860px;
-  margin: 0 auto clamp(24px, 5vw, 80px) auto;
+  margin: 0 auto clamp(60px, 10vw, 150px) auto;
   text-align: center;
 }
 
